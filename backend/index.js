@@ -3,6 +3,10 @@ import cors from "cors";
 import { supabase } from "./supabaseClient.js";
 import adminRoutes from "./routes/adminRoutes.js";
 
+app.get("/", (req, res) => {
+  res.send("Backend deployed successfully 🚀");
+});
+
 const app = express();
 app.use(cors());
 app.use(express.json());
